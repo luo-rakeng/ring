@@ -1,0 +1,61 @@
+div {
+    box-sizing: content-box;  /* bootsrtap 设置为 border-box*/
+}
+.circle_warpper {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 50%;
+}
+.warpper_left,.warpper_right {
+    width: 125px;
+    height: 250px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+}
+.warpper_left {
+    left: 0;
+}
+.warpper_right {
+    right: 0;
+}
+.circle {
+    width: 210px;
+    height: 210px;
+    border: 20px solid #CCC;
+    border-radius: 50%;
+    top: 0;
+    position: absolute;
+}
+.circle_left {
+    left:0;
+    border-bottom:20px solid #2c3e50;
+    border-left: 20px solid #2c3e50;   
+    transform: rotate(45deg);
+    animation: circle_left 1s linear;
+}
+.circle_right {
+    right: 0;
+    border-right: 20px solid #2c3e50;
+    border-top: 20px solid #203e50;
+    transform: rotate(45deg);
+    animation: circle_right 1s linear;
+}
+
+@keyframes circle_right{
+    0% {
+        transform: rotate(-135deg);
+    }
+    50%,100% {
+        transform: rotate(45deg);
+    }
+}
+@keyframes circle_left {
+    0%,50% {
+        transform: rotate(-135deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
